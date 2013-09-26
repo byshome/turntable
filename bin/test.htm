@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+	<div>
+		<div id="divTest">
+			
+		</div>
+		<script type="text/javascript" src="swfturntable.js"></script>
+		<script type="text/javascript">
+			var settings = {
+				flash_url : "turntable.swf",//"http://res.zufangbao.com/scripts/swfturntable/turntable.swf",
+				placeholder_id: "divTest",
+				width:534,
+				height:534,
+				btnEnabled:true,
+				awardCount:10,
+				requestUrl:"http://www.zufangbao.com/testres.htm",
+				requestData:"userid=123&token=298329802830394",//可以附加的请求数据
+				imgBasePath:"",//"http://res.zufangbao.com/images/www/",
+				imgTurntable:"turntable.png",
+				imgPointer:"pointer.png",
+				imgDisableBtn:"turntablebtn.png",
+				imgEnableBtn:"turntablebtn.png",
+				imgRunningBtn:"turntablebtn.png",
+				imgLotteryBtn:"turntablebtn.png",
+				imgSorryBtn:"turntablebtn.png",
+				initCompleted_handler:function(success){
+					//alert(success);
+				},
+				urlRequestFailed_handler:function(code, msg){
+					alert(msg);
+				},
+				lotteryNotice_handler:function(awardLevel, awardMsg){
+					alert(awardMsg);
+				}
+			};
+			var turntable = new Turntable(settings);
+	</script>
+	</div>
+</body>
+</html>
